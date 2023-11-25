@@ -1,0 +1,19 @@
+<div>
+    <div class="titreReservation text-center">
+        <h1 class="text-primary font-weight-bold">La liste des réservations</h1>
+    </div>
+    <div>
+        <h2 class="titreRes2">Réservation du <span class="text-body-secondary">{{ currentDate | date: 'medium' }}</span></h2>
+    </div>
+        <div class=" cardUsers container text-center text-primary row">
+            <div *ngFor="let item of table" class="cardOne card col-md-4 mb-4" style="width: 18rem;">
+                <div class="card-body">
+                <h2 class="card-title">Id : {{ item.id }}</h2>
+                <img src="{{ item.photo }}" class="card-img-top" alt="photo_profile">
+                <h5 class="card-title"><span class="text-primary">{{ item.name }}</span></h5>
+                <p class="card-text">Parties : {{ item.party }}</p>
+                <p class="card-text">Temps : {{ item.time }}</p>
+                <a href="#" class="btn btn-primary">Plus d'informations</a>
+            </div>
+        </div>
+</div>
